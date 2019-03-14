@@ -1,0 +1,15 @@
+<html>
+    <head>
+        <title>{{ title }} - Spotify Artists Migrate</title>
+    </head>
+    <body>
+    	<p>First account successfully obtained!</p>
+    	<br>
+    	{{ auth }}
+    	<form method="post" action="/getCodes">
+    		<input type="hidden" name="grant_type" value="authorization_code" />
+    		<input type="hidden" name="code" value="{{auth}}" />
+    		<input type="hidden" name="redirect_uri" value="http://localhost:5000/callbackFrom" />
+    		<input type="submit"/>
+    </body>
+</html>

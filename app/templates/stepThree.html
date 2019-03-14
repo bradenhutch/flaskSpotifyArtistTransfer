@@ -1,0 +1,9 @@
+<html>
+    <head>
+        <title>{{ title }} - Spotify Artists Migrate</title>
+    </head>
+    <body>
+    	<a href="https://accounts.spotify.com/authorize?client_id={{cid}}&redirect_uri=http:%2F%2Flocalhost:5000%2FcallbackTo&scope=user-read-private%20user-follow-modify&response_type=code&state=123&show_dialog=true">Get the code for your receiving account.</a>
+    	{% for artist in artists -%}{{artist}},{% endfor %}
+    </body>
+</html>

@@ -1,0 +1,13 @@
+<html>
+    <head>
+        <title>{{ title }} - Spotify Artists Migrate</title>
+    </head>
+    <body>
+    	<p>Auth token successfully obtained for the first account!</p>
+    	<br>
+    	{{ auth }}
+    	<form method="post" action="/getArtists">
+    		<input type="hidden" name="code" value="{{auth}}" />
+    		<input type="submit"/>
+    </body>
+</html>
